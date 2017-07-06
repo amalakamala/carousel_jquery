@@ -4,10 +4,13 @@
 	font-family: 'Raleway', sans-serif;	
 }
 
+body{
+	background-image: url(../img/fondo.jpg);
+}
 /*---------- HEADER ----------*/
 .navbar-default {
-    background-color: #47AD98;
-    border-color: #47AD98;
+    background-color: #F1AB00;
+    border-color: transparent;
 }
 
 .container-fluid {
@@ -15,16 +18,20 @@
 } 
 
 .navbar-default .navbar-brand {
-	color: #F1AB00;
+	color: #EFEFEF;
 	height: 60px;	
 }
 
 .navbar-default .navbar-brand:hover {
-    color: #D7D3DD;
+    color: #49B8A1;
 }    
 
 .logo{
 	font-size: 30px;
+}
+
+.pet{
+	font-weight: 700;
 }
 
 /*---------- CARRUSEL ----------*/
