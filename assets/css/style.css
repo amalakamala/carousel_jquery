@@ -1,0 +1,30 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;	
+}
+
+/*---------- HEADER ----------*/
+.navbar-default {
+    background-color: #47AD98;
+    border-color: #47AD98;
+}
+
+.container-fluid {
+    padding-left: 39%;
+} 
+
+.navbar-default .navbar-brand {
+	color: #F1AB00;
+	height: 60px;	
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #D7D3DD;
+}    
+
+.logo{
+	font-size: 30px;
+}
+
+/*---------- CARRUSEL ----------*/
