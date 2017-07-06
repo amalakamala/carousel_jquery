@@ -40,7 +40,7 @@ body{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;    
 }
 
@@ -74,7 +74,7 @@ a:hover{
 
 .fa-circle{
 	display: inline-flex;
-	color: #FFF;
+	color: rgba(250,250,250,0.7);
 
 }
 
@@ -97,3 +97,16 @@ a:hover{
 .carrusel-pages li a i:focus{
 	color: #F1AB00;	
 }
+
+/*---------- FOOTER ----------*/
+
+footer{
+	background-color: #E5E5E5;
+	color: #F1AB00;	
+	font-weight: 600; 
+}
+
+
+
+
+
