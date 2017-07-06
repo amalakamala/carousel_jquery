@@ -33,14 +33,42 @@ carrusel.slider.css({
 });
 
 /* Posicion absoluta todos los <li> del carrusel */
-for (var i=0;i<carrusel.number;i++){
-  var sl = $(carrusel.slides[i]);
-  sl.attr('class',sl.attr('class') + " slider-slide-"+i);
+for (var i=0; i < carrusel.number ;i++){
+  var sl = $(carrusel.slides[i]); //llama los li encontrados
+  sl.attr('class',sl.attr('class') + " slider-slide-"+i); //se le agrega la clase
   sl.css({
-    position : 'absolute',
+    position : 'absolute', // Se agrega CSS para posicionar img para que asimile un carrusel
     left : carrusel.width * i 
   });
 }
 
+/* Movimiento del carrusel */
+carrusel.go = function (where){
+  if (where == 'next'){
+    carrusel.actual = ( carrusel.actual < carrusel.number-1) ? carrusel.actual * 1 + 1 : 0; //if dentro de un if
+  }else if (where == 'prev'){
+    carrusel.actual = ( carrusel.actual > 0) ? carrusel.actual - 1 : carrusel.number - 1;
+  }else{
+    carrusel.actual = where;
+  }
+
+  for (var i=0; i < carrusel.number; i++){
+    var sl = $(carrusel.slides[i]);
+    sl.animate({
+        left : carrusel.width * (i - carrusel.actual)
+    },2000);
+  }
+};
+
+/* Creación botones next prev */
+$(carrusel.initQuery).append("<a href='#next' class='carrusel-prev'><i class='fa fa-chevron-left' aria-hidden='true'></i></a><a href='#next' class='carrusel-next'><i class='fa fa-chevron-right' aria-hidden='true'></i></a>");
+$(carrusel.initQuery + " .carrusel-next").click(function () { //Su se hace click llama a la function carrusel.go y detona si es igual a next
+  carrusel.go('next');
+  return false; 
+});
+$(carrusel.initQuery + " .carrusel-prev").click(function () { //Su se hace click llama a la function carrusel.go y detona si es igual a prev
+  carrusel.go('prev');
+  return false; 
+});
 
 
