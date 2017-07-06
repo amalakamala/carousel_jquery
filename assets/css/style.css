@@ -35,3 +35,65 @@ body{
 }
 
 /*---------- CARRUSEL ----------*/
+
+.carrusel{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+ul{
+	list-style-type: none;
+	padding:0px;	
+}
+
+a:focus,
+a:hover{
+	color: #BFBFBF;
+	text-decoration: none;
+}
+
+
+.carrusel-prev{
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	font-size: 40px;	
+	color: rgba(250,250,250,0.7);
+}
+
+.carrusel-next{
+	position: absolute;
+	right: 10px;
+	top: 50%;	
+	font-size: 40px;	
+	color: rgba(250,250,250,0.7);	
+}
+
+.carrusel-prev:hover,
+.carrusel-next:hover{
+	color: white;		
+}
+
+.fa-circle{
+	display: inline-flex;
+	color: #FFF;
+
+}
+
+.carrusel-pages{
+	position: absolute;
+    top: 520px;
+    display: inline-flex;
+}
+
+.selected li a:hover,
+.selected li a:focus,
+.selected li a:before{
+	text-decoration: none;
+}
+
+.carrusel-pages li{
+	padding: 0 10px;
+}
